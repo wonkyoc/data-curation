@@ -1,0 +1,6 @@
+[submodule "pile-ubuntu-irc"]
+	path = pile-ubuntu-irc
+	url = git@github.com:EleutherAI/pile-ubuntu-irc.git
+[submodule "The-Pile-PhilPapers"]
+	path = The-Pile-PhilPapers
+	url = git@github.com:thoppe/The-Pile-PhilPapers.git
