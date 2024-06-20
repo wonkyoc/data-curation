@@ -37,8 +37,8 @@ To achieve this, see and use `python collect_data.py`.
 Step 2-1: zstandard -> jsonl. The data format is sometimes compressed as zstandard.
 Use `zsd2jsonl.py` to convert it to .jsonl
 
-Step 3: combine datasets to a single file. At this point, we have curated datasets and 
-need to make a single big file. (WIP)
+Step 3: combine datasets to a single file. If we have curated datasets then we
+need to make a single big file. This can be done by `combine_data()` in `collect_data.py`
 
 ```
 data/a.jsonl -->

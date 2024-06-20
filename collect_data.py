@@ -7,27 +7,42 @@ datasets = {
         #"pg19": "deepmind/pg19",           # 
         #"owt2": "segyges/OpenWebText2",    # 
         #"pol": "pile-of-law/pile-of-law"   # works
-        "minipile": "JeanKaddour/minipile"  # works
+        #"minipile": "JeanKaddour/minipile"  # works
+        "test": None,
+        "demo": None,
         }
 
 
-def load_data(k, v):
-    #cache_dir = "/p/alpha/hf_cache"
-    if k == "wiki":
-        return load_dataset(v, language="en", date="20240601")
-    elif k == "pol":
-        return load_dataset(v, "all")
-    else:
-        return load_dataset(v)
 
+def combine_data():
+    lines = []
+    for k, v in datasets.items():
+        filename = f"data/{k}.jsonl"
+        if os.path.exists(filename) == False:
+            assert(f"{k}.jsonl not exist")
+        with open(filename, "r") as f:
+            chunk = f.read().split("\n")
+            for line in chunk[:-1]:
+                lines.append(json.loads(line))
+    
+    with open("data/data.jsonl", "w") as f:
+        for row in lines:
+            f.write(json.dumps(row) + "\n")
 
-def main():
+def load_data():
     for k, v in datasets.items():
         print(f"create {k}")
         if os.path.exists(f"data/{k}.jsonl"):
             print(f"{k} exists")
             continue
-        d = load_data(k, v)
+
+        #cache_dir = "/p/alpha/hf_cache"
+        if k == "wiki":
+            d = load_dataset(v, language="en", date="20240601")
+        elif k == "pol":
+            d = load_dataset(v, "all")
+        else:
+            d = load_dataset(v)
 
         texts = []
         for row in d["train"]:
@@ -42,4 +57,5 @@ def main():
                 f.write(json.dumps(row) + "\n")
 
 if __name__ == "__main__":
-    main()
+    #load_data()
+    combine_data()
