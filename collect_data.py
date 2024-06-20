@@ -5,10 +5,11 @@ import os.path
 datasets = {
         #"dolly": "databricks/databricks-dolly-15k"  # works
         #"minipile": "JeanKaddour/minipile",     # works
-        "wiki": "olm/wikipedia",               # works
-        #"pg19": "deepmind/pg19",               # 
-        #"owt2": "segyges/OpenWebText2",        #
+        #"wiki": "olm/wikipedia",               # works but huge
+        #"pg19": "deepmind/pg19",               # works 
+        #"owt2": None,        #
         #"irc": None,                           # works but from git repo
+        #"philpaper: None,                      # WIP from git repo
         #"pol": "pile-of-law/pile-of-law",      # works
         }
 
@@ -22,11 +23,13 @@ def combine_data():
 
     for k, v in datasets.items():
         filename = f"data/{k}.jsonl"
+
         if os.path.exists(filename) == False:
             assert(f"{k}.jsonl not exist")
+
         with open(filename, "r") as f:
             chunk = f.read().split("\n")
-            for line in chunk[:-1]:
+            for line in chunk[:-1]: # the last line is empty
                 lines.append(json.loads(line))
     
     with open("data/data.jsonl", "w") as f:
@@ -40,11 +43,17 @@ def load_data():
             continue
 
         print(f"create {k}")
+
         #cache_dir = "/p/alpha/hf_cache"
         if k == "wiki":
-            d = load_dataset(v, language="en", date="20240601")
+            # d = load_dataset(v, language="en", date="20240601") # too large about 70G 
+            d = load_dataset("olm/wikipedia", language="en", date="20220920")
         elif k == "pol":
             d = load_dataset(v, "all")
+        elif k == "irc":
+            assert("use submodule repo: pile-ubuntu-irc")
+        elif  k == "owt2":
+            assert("use wget: bash download.sh")
         else:
             d = load_dataset(v)
 
