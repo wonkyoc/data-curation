@@ -7,8 +7,8 @@ datasets = {
         #"minipile": "JeanKaddour/minipile",     # works
         #"wiki": "olm/wikipedia",               # works but huge
         #"pg19": "deepmind/pg19",               # works 
-        #"owt2": None,        #
-        #"irc": None,                           # works but from git repo
+        #"owt2": None,                          # works
+        #"irc": None,                           # works
         #"philpaper: None,                      # WIP from git repo
         #"pol": "pile-of-law/pile-of-law",      # works
         }
