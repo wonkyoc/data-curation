@@ -17,11 +17,10 @@ A LOT OF TIME to produce. The size of data is about 140GB and it contains web, w
 
 ```
 cp /p/alpha/data.* {path}/RWKV-LM/RWKV-v5/data/
-
 ```
 
 Step 1: collect dataset. There are two ways: (1) download it from huggingface.
-This can be done by `load_dataset()`[link](https://huggingface.co/docs/datasets/v2.20.0/loading)
+This can be done by `load_dataset()`[[link](https://huggingface.co/docs/datasets/v2.20.0/loading)]
 (2) download a raw file from a github repo or website. This should be manually done.
 
 Step 2: convert datasets to the RWKV format. RWKV requires a specific dictionary format:
@@ -56,7 +55,6 @@ To conver .json, use `RWKV-LM/RWKV-v5/make_data.py`:
 ```
 python make_data.py [filename] [num_suffle] [ctx_length]
 python make_data.py data.jsonl 1 512 > data.txt
-
 ```
 This takes ages if the size of datasets is huge. Once this operations done, it will print out a magic number.
 
