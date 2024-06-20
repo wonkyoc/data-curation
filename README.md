@@ -11,8 +11,9 @@ git submodule update
 
 # Guideline
 
-Step 0: Please use `/p/alpha/{data.bin, data.idx, data.txt}`. The following steps require
-A LOT OF TIME to produce. The size of data is about 140GB and it contains web, wiki, and various.
+Step 0: Please use in our dept project `/p/alpha/{data.bin, data.idx, data.txt}`. 
+Currently, `/p/alpha` is available for Prof. Lin, Wang, Choe.
+The following steps require A LOT OF TIME to produce. The size of data is about 140GB and it contains web, wiki, and various.
 `data.txt` contains a magic number.
 
 ```

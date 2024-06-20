@@ -3,19 +3,23 @@ import json
 import os.path
 
 datasets = {
-        #"wiki": "olm/wikipedia",           # works
-        #"pg19": "deepmind/pg19",           # 
-        #"owt2": "segyges/OpenWebText2",    # 
-        #"pol": "pile-of-law/pile-of-law"   # works
-        #"minipile": "JeanKaddour/minipile"  # works
-        "test": None,
-        "demo": None,
+        #"dolly": "databricks/databricks-dolly-15k"  # works
+        #"minipile": "JeanKaddour/minipile",     # works
+        "wiki": "olm/wikipedia",               # works
+        #"pg19": "deepmind/pg19",               # 
+        #"owt2": "segyges/OpenWebText2",        #
+        #"irc": None,                           # works but from git repo
+        #"pol": "pile-of-law/pile-of-law",      # works
         }
 
 
 
 def combine_data():
     lines = []
+
+    if os.path.exists("data/data.jsonl"):
+        assert(f"{k}.jsonl exist. Please delete the file")
+
     for k, v in datasets.items():
         filename = f"data/{k}.jsonl"
         if os.path.exists(filename) == False:
@@ -31,11 +35,11 @@ def combine_data():
 
 def load_data():
     for k, v in datasets.items():
-        print(f"create {k}")
         if os.path.exists(f"data/{k}.jsonl"):
             print(f"{k} exists")
             continue
 
+        print(f"create {k}")
         #cache_dir = "/p/alpha/hf_cache"
         if k == "wiki":
             d = load_dataset(v, language="en", date="20240601")
@@ -47,8 +51,8 @@ def load_data():
         texts = []
         for row in d["train"]:
             text = ""
-            for k, v in row.items():
-                text += f"{k}: {v}"
+            for key, value in row.items():
+                text += f"{key}: {value}"
             texts.append({"text": text})
         
         # write concat jsonl
@@ -57,5 +61,5 @@ def load_data():
                 f.write(json.dumps(row) + "\n")
 
 if __name__ == "__main__":
-    #load_data()
-    combine_data()
+    load_data()
+    #combine_data()
