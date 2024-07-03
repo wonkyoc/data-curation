@@ -5,7 +5,7 @@ import os.path
 datasets = {
         #"dolly": "databricks/databricks-dolly-15k"  # works
         #"minipile": "JeanKaddour/minipile",     # works
-        #"wiki": "olm/wikipedia",               # works but huge
+        "wiki": "olm/wikipedia",               # works but huge
         #"pg19": "deepmind/pg19",               # works 
         #"owt2": None,                          # works
         #"irc": None,                           # works
@@ -46,8 +46,7 @@ def load_data():
 
         #cache_dir = "/p/alpha/hf_cache"
         if k == "wiki":
-            # d = load_dataset(v, language="en", date="20240601") # too large about 70G 
-            d = load_dataset("olm/wikipedia", language="en", date="20220920")
+            d = load_dataset("wikimedia/wikipedia", "20231101.en")
         elif k == "pol":
             d = load_dataset(v, "all")
         elif k == "irc":

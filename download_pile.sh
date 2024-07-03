@@ -1,0 +1,32 @@
+#!/bin/bash
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/00.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/01.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/02.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/03.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/04.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/05.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/06.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/07.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/08.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/09.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/10.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/11.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/12.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/13.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/14.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/15.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/16.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/17.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/18.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/19.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/20.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/21.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/22.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/23.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/24.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/25.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/26.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/27.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/28.jsonl.zst
+#wget https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/main/train/29.jsonl.zst
+
